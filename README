@@ -1,26 +1,31 @@
-Simple command line tool written in perl based on Eixo::Docker::Api for application peloy on remote Docker machine.
+Simple command line tool written in perl  based on Eixo::Docker::Api for application peloy on remote Docker machine.
 
-Uses Docker API.
+	* Uses Docker API.
 
-Supports safe TLS auth.
+	* Supports safe TLS auth.
 
-Understand Image ID in form of repository/image:version, e.g. tutum/hello-world (if no version isprovided, ‘latest’ is used).
+	* Understand Image ID in form of repository/image:version, e.g. tutum/hello-world (if no version isprovided, ‘latest’ is used).
 
-Can set up Ports to be forwarded to the host instance (optional).
+	* Can set up Ports to be forwarded to the host instance (optional).
 
-Can execute Command  (optional).
+	* Can execute Command  (optional).
 
-Set Service Name (optional).
+	* Set Service Name (optional).
+
+	* Can get remote Docker containers status in 'docker ps' lie format for checking.
 
 Examples of use:
 
-./deploy_on_docker.pl -m deploy --image "tutum/hello-world" --cmd "ls -lrt" -p 80 --hostPort 80 -H "127.0.0.1:1234" -d
+	./deploy_on_docker.pl -m deploy --image "tutum/hello-world" --cmd "ls -lrt" -p 80 --hostPort 80 -H "127.0.0.1:1234" -d
 
-./deploy_on_docker.pl -m deploy --image "trafex/alpine-nginx-php7" --name "php7" -p 80 --hostPort 8100 -H "127.0.0.1:1234"
+	./deploy_on_docker.pl -m deploy --image "trafex/alpine-nginx-php7" --name "php7" -p 80 --hostPort 8100 -H "127.0.0.1:1234"
 
-./deploy_on_docker.pl -m deploy --image "ubuntu:14.04" --name "ubuntu" -p 80 --hostPort 81 -H "127.0.0.1:1234"
+	./deploy_on_docker.pl -m deploy --image "ubuntu:14.04" --name "ubuntu" -p 80 --hostPort 81 -H "127.0.0.1:1234"
 
 For secure connection put certs to ./crt/ folder
 
-./deploy_on_docker.pl -m deploy --tlsverify --image "tutum/hello-world" --cmd "ls -lrt" -p 80 --hostPort 80 -H "192.168.0.170:2376" -d
+	./deploy_on_docker.pl -m deploy --tlsverify --image "tutum/hello-world" --cmd "ls -lrt" -p 80 --hostPort 80 -H "192.168.0.170:2376" -d
 
+Check Docker Health
+
+	./deploy_on_docker.pl -m health_check -H "127.0.0.1:1234"
