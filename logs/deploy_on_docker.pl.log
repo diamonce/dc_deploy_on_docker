@@ -1,0 +1,62 @@
+----------------------------------
+HostName: MacBook-Pro-Dmytro.local
+DateTime: 2018-10-25 02:28:53
+
+----------------------------------
+Base Dir:	.
+Log File:	./logs/deploy_on_docker.pl.log
+
+DockerEndpoint -->127.0.0.1:1234<--
+
+Mode:		deploy
+
+TLS_Verify:		0
+TLS_CertBaseDir:	./crt/
+TLS_cacert:		./crt//ca.pem
+TLS_cert:		./crt//cert.pem
+TLS_key:		./crt//key.pem
+---------------------------------
+---------------------------------
+-- DEPLOY --
+---------------------------------
+ServiceName    :	
+DockerImage    :	tutum/hello-world
+DockerImageTag :	
+ImagePorts     :	80
+RemoteCmd      :	ls -lrt
+RemoteHostIP   :	0.0.0.0
+RemoteHostPort :	80
+---------------------------------
+MSG: Create container.
+----------------------------------
+HostName: MacBook-Pro-Dmytro.local
+DateTime: 2018-10-25 12:02:09
+
+----------------------------------
+Base Dir:	.
+Log File:	./logs/deploy_on_docker.pl.log
+
+DockerEndpoint -->127.0.0.1:1234<--
+
+Mode:		deploy
+
+TLS_Verify:		0
+TLS_CertBaseDir:	./crt/
+TLS_cacert:		./crt//ca.pem
+TLS_cert:		./crt//cert.pem
+TLS_key:		./crt//key.pem
+---------------------------------
+---------------------------------
+-- DEPLOY --
+---------------------------------
+ServiceName    :	
+DockerImage    :	tutum/hello-world
+DockerImageTag :	
+ImagePorts     :	80
+RemoteCmd      :	ls -lrt
+RemoteHostIP   :	0.0.0.0
+RemoteHostPort :	80
+---------------------------------
+MSG: Create container.
+MSG: CleanUp.
+MSG: Completed.
