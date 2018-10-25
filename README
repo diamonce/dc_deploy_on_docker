@@ -1,4 +1,4 @@
-Simple command line tool written in perl  based on Eixo::Docker::Api for application peloy on remote Docker machine.
+Simple command line tool written in perl  based on Eixo::Docker::Api for service deploy on remote Docker machine.
 
 	* Uses Docker API.
 
